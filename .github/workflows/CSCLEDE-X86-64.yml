@@ -1,14 +1,14 @@
 name: CSCLEDE-X86-64
 on: 
-  push:
+  #push:
     branches: 
       - master
-  release:
-    types: [published]
+  #release:
+   # types: [published]
   schedule:
     - cron: 15 20 * * 4
-  watch:
-    types: [started]
+ # watch:
+    #types: [started]
 jobs:
   build:
     runs-on: ubuntu-latest
