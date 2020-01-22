@@ -7,8 +7,8 @@ on:
     types: [published]
   schedule:
     - cron: 20 20 5,15,25 * *
-  #watch:
-  #  types: [started]
+  watch:
+    types: [started]
 jobs:
   build:
     runs-on: ubuntu-latest
