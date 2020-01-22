@@ -1,14 +1,14 @@
 name: CSCLEDE-X86-64-Lienol
 on: 
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
   release:
     types: [published]
-  #schedule:
-  #  - cron: 15 20 * * 2,5
-  #watch:
-  #  types: [started]
+  schedule:
+    - cron: 15 20 * * 2,5
+  watch:
+    types: [started]
 jobs:
   build:
     runs-on: ubuntu-latest
