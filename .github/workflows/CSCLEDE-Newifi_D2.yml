@@ -91,5 +91,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: CSCLEDE-Newifi_D2
+        name: CSCLEDE-NewifiD2
         path: openwrt/bin
