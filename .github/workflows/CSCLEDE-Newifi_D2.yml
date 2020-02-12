@@ -1,14 +1,14 @@
 name: CSCLEDE-Newifi_D2
 on: 
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
   release:
     types: [published]
   schedule:
     - cron: 20 20 5,15,25 * *
-  #watch:
-  #  types: [started]
+  watch:
+    types: [started]
 jobs:
   build:
     runs-on: ubuntu-latest
