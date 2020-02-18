@@ -62,12 +62,11 @@ jobs:
         mv openwrt-package/lienol/luci-app-pptp-vpnserver-manyusers ./luci-app-pptp-vpnserver-manyusers      
         mv OpenClash/luci-app-openclash ./luci-app-openclash
         rm -rf OpenClash && openwrt-package
-        cd luci-theme-argon/htdocs/luci-static/argon/css
-        wget -O style.css https://raw.githubusercontent.com/wubin2/AutoBuild-CSCLEDE/master/style.css
+        #cd luci-theme-argon/htdocs/luci-static/argon/css
+        #wget -O style.css https://raw.githubusercontent.com/wubin2/AutoBuild-CSCLEDE/master/style.css
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
