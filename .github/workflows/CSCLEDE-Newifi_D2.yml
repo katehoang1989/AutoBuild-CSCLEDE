@@ -58,10 +58,13 @@ jobs:
         git clone https://github.com/happyzhang1995/openwrt-adguardhome.git
         git clone https://github.com/jerrykuku/luci-theme-argon.git
         git clone https://github.com/vernesong/OpenClash.git
+        git clone https://github.com/Lienol/openwrt-package.git
+        mv openwrt-package/lienol/luci-app-pptp-vpnserver-manyusers ./luci-app-pptp-vpnserver-manyusers
         mv OpenClash/luci-app-openclash ./luci-app-openclash
         rm -rf OpenClash
-        #cd luci-theme-argon/htdocs/luci-static/argon/css
-        #wget -O style.css https://raw.githubusercontent.com/wubin2/AutoBuild-CSCLEDE/master/style.css
+        rm -rf openwrt-package
+        cd luci-theme-argon/htdocs/luci-static/argon/css
+        wget -O style.css https://raw.githubusercontent.com/wubin2/AutoBuild-CSCLEDE/master/style.css
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
